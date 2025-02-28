@@ -3,5 +3,5 @@ pub use proc_macro::rename_future;
 
 pub use elain::Align;
 
-pub struct PhantomUnsend(std::marker::PhantomData<*const std::ffi::c_void>);
+pub struct PhantomUnsend(core::marker::PhantomData<*const ()>);
 unsafe impl Sync for PhantomUnsend {}
